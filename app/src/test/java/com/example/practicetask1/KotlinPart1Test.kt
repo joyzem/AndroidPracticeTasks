@@ -3,6 +3,7 @@ package com.example.practicetask1
 import com.example.practicetask1.kotlinPart1.Book
 import com.example.practicetask1.kotlinPart1.Magazine
 import com.example.practicetask1.kotlinPart1.Publication
+import org.jetbrains.annotations.NotNull
 import org.junit.Test
 
 class KotlinPart1Test {
@@ -11,10 +12,19 @@ class KotlinPart1Test {
     private val secondBook = Book(100f, 4353)
     private val magazine = Magazine(10f, 542)
 
+    private val notNullBook: Book? = Book(100f, 1100)
+    private val nullBook: Book? = null
+
     @Test
     fun test() {
         displayInfo()
         compareBooks()
+        notNullBook?.let { buy(it) }
+        nullBook?.let { buy(it) }
+    }
+
+    fun buy(@NotNull publication: Publication) {
+        println("The purchase is complete. The purchase amount was ${publication.getPriceString()}\n")
     }
 
     fun displayInfo() {
@@ -27,7 +37,7 @@ class KotlinPart1Test {
         val linksResult = firstBook === secondBook
         val equalsResult = firstBook.equals(secondBook)
         println("Links comparing: $linksResult" +
-                "\nEquals comparing: $equalsResult")
+                "\nEquals comparing: $equalsResult\n")
     }
 
     fun displayPublicationInfo(publication: Publication) {
