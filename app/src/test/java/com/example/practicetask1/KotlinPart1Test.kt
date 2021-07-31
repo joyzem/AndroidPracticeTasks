@@ -15,12 +15,22 @@ class KotlinPart1Test {
     private val notNullBook: Book? = Book(100f, 1100)
     private val nullBook: Book? = null
 
+    private val sum = { firstValue: Int, secondValue: Int ->
+        println(firstValue + secondValue)
+    }
+
     @Test
     fun test() {
         displayInfo()
         compareBooks()
+
         notNullBook?.let { buy(it) }
         nullBook?.let { buy(it) }
+
+        sum(3, 2)
+        sum(-4, 2)
+        sum(0, 3)
+        sum(2, 6)
     }
 
     fun buy(@NotNull publication: Publication) {
