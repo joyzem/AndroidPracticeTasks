@@ -47,3 +47,11 @@ fun applyToUsersList() {
         add(User(4, "Nick", 11, Type.DEMO))
     }
 }
+
+/*
+    Получить списоĸ пользователей, у ĸоторых имеется полный доступ (поле type имеет
+    значение FULL ).
+ */
+fun getUsersWithFullAccess(users: List<User>): List<User> {
+    return users.filter { user -> user.type == Type.FULL }
+}
