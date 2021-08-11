@@ -98,3 +98,22 @@ fun getAuthCallbackObject(): AuthCallback {
         }
     }
 }
+
+
+/*
+    Реализовать inline фунĸцию auth , принимающую в ĸачестве параметра фунĸцию
+    updateCache . Фунĸция updateCache должна выводить в лог информацию об обновлении
+    ĸэша.
+ */
+const val CACHE_UPDATED = "Cache is updated"
+const val CACHE_NOT_UPDATED = "Cache is not updated"
+
+inline fun auth(status: Boolean, updateCache: (status: Boolean) -> Unit) {
+    updateCache(status)
+}
+
+fun displayCacheStatus(cacheStatus: Boolean) {
+    auth(cacheStatus) {
+        if (cacheStatus) println(CACHE_UPDATED) else println(CACHE_NOT_UPDATED)
+    }
+}
