@@ -125,8 +125,18 @@ inline fun auth(user: User, updateCache: (status: Boolean) -> Unit) {
     }
 }
 
-fun displayCacheStatus(user: User) {
+fun displayAuthStatus(user: User) {
     auth(user) { status ->
         if (status) println(CACHE_UPDATED) else println(CACHE_NOT_UPDATED)
     }
+}
+
+/*
+    Реализовать изолированный ĸласс Action и его наследниĸов – Registration , Login и
+    Logout . Login должен принимать в ĸачестве параметра эĸземпляр ĸласса User.
+ */
+sealed class Action {
+    class Registration : Action()
+    class Login(val user: User) : Action()
+    class Logout : Action()
 }
