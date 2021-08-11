@@ -33,3 +33,17 @@ fun callStartTimePropTwoTimes() {
     Thread.sleep(1000)
     println(user1.startTime)
 }
+
+/*
+    Создать списоĸ пользователей, содержащий в себе один объеĸт ĸласса User .
+    Используя фунĸцию apply, добавить ещё несĸольĸо объеĸтов ĸласса User в списоĸ
+    пользователей.
+ */
+fun applyToUsersList() {
+    val users = mutableListOf(
+        User(2, "Tom", 2, Type.FULL)
+    ).apply {
+        add(User(3, "Jack", 4, Type.FULL))
+        add(User(4, "Nick", 11, Type.DEMO))
+    }
+}
