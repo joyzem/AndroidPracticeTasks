@@ -66,3 +66,11 @@ fun convertToNamesListAndPrintFirstAndLastNames(users: List<User>) {
     val lastUserName = usersName.last()
     println("$firstUserName, $lastUserName")
 }
+
+/*
+    Создать фунĸцию-расширение ĸласса User , ĸоторая проверяет, что юзер старше 18 лет,
+    и в случае успеха выводит в лог, а в случае неуспеха возвращает ошибĸу.
+ */
+fun User.isOlderThanEighteen() {
+    if (this.age >= 18) println(this) else throw IllegalArgumentException()
+}
