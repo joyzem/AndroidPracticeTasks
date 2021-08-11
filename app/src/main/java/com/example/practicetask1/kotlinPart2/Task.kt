@@ -23,3 +23,13 @@ data class User(
     }
 }
 
+/*
+    Создать объеĸт ĸласса User , вывести в лог startTime данного юзера, после вызвать
+    Thread.sleep(1000) и повторно вывести в лог startTime.
+ */
+fun callStartTimePropTwoTimes() {
+    val user1: User = User(1, "John",1, Type.DEMO)
+    println(user1.startTime)
+    Thread.sleep(1000)
+    println(user1.startTime)
+}
