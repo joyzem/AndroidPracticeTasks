@@ -140,3 +140,23 @@ sealed class Action {
     class Login(val user: User) : Action()
     class Logout : Action()
 }
+
+/*
+    Реализовать метод doAction , принимающий эĸземпляр ĸласса Action . В зависимости
+    от переданного действия выводить в лог теĸст, ĸ примеру “Auth started”. Для действия
+    Login вызывать метод auth .
+ */
+const val WELCOME_MESSAGE = "Welcome to the club!"
+const val GOODBYE_MESSAGE = "Goodbye!"
+const val AUTH_MESSAGE = "Auth started!"
+
+fun doAction(action: Action) {
+    when(action) {
+        is Action.Registration -> println(WELCOME_MESSAGE)
+        is Action.Login -> {
+            println(AUTH_MESSAGE)
+            displayAuthStatus(action.user)
+        }
+        is Action.Logout -> println(GOODBYE_MESSAGE)
+    }
+}
