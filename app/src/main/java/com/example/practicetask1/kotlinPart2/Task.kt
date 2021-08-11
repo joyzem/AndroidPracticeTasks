@@ -55,3 +55,14 @@ fun applyToUsersList() {
 fun getUsersWithFullAccess(users: List<User>): List<User> {
     return users.filter { user -> user.type == Type.FULL }
 }
+
+/*
+    Преобразовать списоĸ User в списоĸ имен пользователей. Получить первый и
+    последний элементы списĸа и вывести их в лог.
+ */
+fun convertToNamesListAndPrintFirstAndLastNames(users: List<User>) {
+    val usersName = users.map { user -> user.name }
+    val firstUserName = usersName.first()
+    val lastUserName = usersName.last()
+    println("$firstUserName, $lastUserName")
+}
