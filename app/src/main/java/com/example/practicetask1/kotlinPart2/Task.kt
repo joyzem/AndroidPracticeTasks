@@ -74,3 +74,27 @@ fun convertToNamesListAndPrintFirstAndLastNames(users: List<User>) {
 fun User.isOlderThanEighteen() {
     if (this.age >= 18) println(this) else throw IllegalArgumentException()
 }
+
+/*
+    Создать интерфейс AuthCallback с методами authSuccess , authFailed и реализовать
+    анонимный объеĸт данного интерфейса. В методах необходимо вывести в лог
+    информацию о статусе авторизации
+ */
+const val AUTH_FAILED = "Authentification failed"
+const val AUTH_SUCCESS = "Authentification success"
+
+interface AuthCallback {
+    fun authSuccess()
+    fun authFailed()
+}
+
+fun getAuthCallbackObject(): AuthCallback {
+    return object : AuthCallback {
+        override fun authFailed() {
+            println(AUTH_FAILED)
+        }
+        override fun authSuccess() {
+            println(AUTH_SUCCESS)
+        }
+    }
+}
