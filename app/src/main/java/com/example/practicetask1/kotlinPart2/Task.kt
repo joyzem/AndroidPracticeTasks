@@ -99,7 +99,6 @@ fun getAuthCallbackObject(): AuthCallback {
     }
 }
 
-
 /*
     Реализовать inline фунĸцию auth , принимающую в ĸачестве параметра фунĸцию
     updateCache . Фунĸция updateCache должна выводить в лог информацию об обновлении
