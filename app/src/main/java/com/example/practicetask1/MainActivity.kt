@@ -7,6 +7,7 @@ import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+        setTheme(R.style.Theme_PracticeTask1)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
