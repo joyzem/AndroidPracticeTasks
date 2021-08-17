@@ -9,10 +9,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         setTheme(R.style.Theme_PracticeTask1)
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
-        findViewById<Button>(R.id.button).setOnClickListener {
-            Snackbar.make(it, "Hello!", Snackbar.LENGTH_SHORT).show()
-        }
+        setContentView(R.layout.profile_layout)
     }
 }

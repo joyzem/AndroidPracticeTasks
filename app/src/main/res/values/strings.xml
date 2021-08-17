@@ -5,4 +5,5 @@
     <string name="get_push_nots">Получать push-уведомления</string>
     <string name="your_friends">Ваши друзья</string>
     <string name="exit_string">Выйти из аккаунта</string>
+    <string name="profile">Профиль</string>
 </resources>

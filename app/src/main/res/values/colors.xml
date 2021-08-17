@@ -13,4 +13,5 @@
     <color name="cool_grey">#AABBBB</color>
     <color name="leaf">#66A636</color>
     <color name="leaf_dark">#347700</color>
+    <color name="leaf_light">#98D764</color>
 </resources>
