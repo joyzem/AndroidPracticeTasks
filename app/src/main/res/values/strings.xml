@@ -6,4 +6,9 @@
     <string name="your_friends">Ваши друзья</string>
     <string name="exit_string">Выйти из аккаунта</string>
     <string name="profile">Профиль</string>
+    <string name="edit_profile">Edit profile</string>
+    <string name="news">Новости</string>
+    <string name="search">Поиск</string>
+    <string name="history">История</string>
+    <string name="help">Помочь</string>
 </resources>

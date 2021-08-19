@@ -3,4 +3,6 @@
     <dimen name="margin_between_list_items">10dp</dimen>
     <dimen name="start_section_margin">16dp</dimen>
     <dimen name="new_section">20dp</dimen>
+    <dimen name="app_bar_layout_size">300dp</dimen>
+    <dimen name="bottom_nav_menu_margin">92dp</dimen>
 </resources>
