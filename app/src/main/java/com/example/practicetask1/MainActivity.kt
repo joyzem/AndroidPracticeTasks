@@ -1,9 +1,7 @@
 package com.example.practicetask1
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.core.view.get
-import com.google.android.material.bottomnavigation.BottomNavigationMenuView
+import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
