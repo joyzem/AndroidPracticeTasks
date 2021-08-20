@@ -7,24 +7,25 @@
     tools:background="@color/white">
 
     <ImageView
-        android:id="@+id/photo"
+        android:id="@+id/second_friend_photo"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:src="@drawable/avatar_2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        />
+        tools:ignore="ContentDescription" />
 
     <TextView
-        android:id="@+id/name"
+        android:id="@+id/second_friend_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:text="Евгений Александров"
-        app:layout_constraintBottom_toBottomOf="@id/photo"
-        app:layout_constraintStart_toEndOf="@id/photo"
-        app:layout_constraintTop_toTopOf="@id/photo"
-        style="@style/TextStyle8" />
+        app:layout_constraintBottom_toBottomOf="@id/second_friend_photo"
+        app:layout_constraintStart_toEndOf="@id/second_friend_photo"
+        app:layout_constraintTop_toTopOf="@id/second_friend_photo"
+        style="@style/TextStyle8"
+        tools:ignore="HardcodedText" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

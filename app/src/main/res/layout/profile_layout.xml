@@ -85,10 +85,10 @@
         android:id="@+id/help_fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:contentDescription="@string/help"
         android:src="@drawable/ic_favourite"
         app:backgroundTint="@color/melon"
         app:tint="@color/white"
-        app:layout_anchor="@id/bottom_app_bar"
-        />
+        app:layout_anchor="@id/bottom_app_bar" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

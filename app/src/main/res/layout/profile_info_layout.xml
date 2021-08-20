@@ -2,6 +2,7 @@
 <androidx.core.widget.NestedScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -39,7 +40,8 @@
             android:textColor="@color/black_87"
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="@id/left_guideline"
-            app:layout_constraintTop_toTopOf="@id/top_guideline" />
+            app:layout_constraintTop_toTopOf="@id/top_guideline"
+            tools:ignore="HardcodedText" />
 
         <TextView
             android:id="@+id/birthday_label"
@@ -61,6 +63,7 @@
             app:layout_constraintEnd_toStartOf="@+id/right_guideline"
             app:layout_constraintStart_toStartOf="@id/left_guideline"
             app:layout_constraintTop_toBottomOf="@id/birthday_label"
+            tools:ignore="HardcodedText"
              />
 
         <TextView
@@ -83,7 +86,8 @@
             android:text="Хирургия, травмотология"
             app:layout_constraintTop_toBottomOf="@id/sphere_label"
             app:layout_constraintEnd_toEndOf="@id/right_guideline"
-            app:layout_constraintStart_toStartOf="@id/left_guideline"/>
+            app:layout_constraintStart_toStartOf="@id/left_guideline"
+            tools:ignore="HardcodedText"/>
 
         <View
             android:id="@+id/divider0"
