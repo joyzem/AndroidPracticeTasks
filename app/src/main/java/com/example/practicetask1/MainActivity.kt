@@ -8,7 +8,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         setTheme(R.style.Theme_PracticeTask1)
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.profile_layout)
+        setContentView(R.layout.activity_main)
         val bottomNavigationMenu: BottomNavigationView = findViewById(R.id.bottom_nav_menu)
         bottomNavigationMenu.apply {
             background = null
