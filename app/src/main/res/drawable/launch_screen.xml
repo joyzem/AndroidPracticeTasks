@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@color/pale_grey"/>
+
+    <item>
+        <bitmap
+            android:src="@drawable/icon_logo"
+            android:gravity="center"/>
+    </item>
+
+    <item android:bottom="88dp">
+        <bitmap
+            android:src="@drawable/logo_mss"
+            android:gravity="center_horizontal|bottom"/>
+    </item>
+
+</layer-list>

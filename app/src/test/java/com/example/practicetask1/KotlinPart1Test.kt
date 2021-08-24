@@ -46,15 +46,17 @@ class KotlinPart1Test {
     fun compareBooks() {
         val linksResult = firstBook === secondBook
         val equalsResult = firstBook.equals(secondBook)
-        println("Links comparing: $linksResult" +
-                "\nEquals comparing: $equalsResult\n")
+        println(
+            "Links comparing: $linksResult" +
+                "\nEquals comparing: $equalsResult\n"
+        )
     }
 
     fun displayPublicationInfo(publication: Publication) {
         val info = "Publication: ${publication.javaClass.simpleName}\n" +
-                "Type: ${publication.getType()}\n" +
-                "Words count: ${publication.wordCount}\n" +
-                "Price: ${publication.getPriceString()}.\n"
+            "Type: ${publication.getType()}\n" +
+            "Words count: ${publication.wordCount}\n" +
+            "Price: ${publication.getPriceString()}.\n"
         println(info)
     }
 }

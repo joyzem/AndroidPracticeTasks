@@ -1,7 +1,7 @@
 package com.example.practicetask1.kotlinPart1
 
 import java.text.NumberFormat
-import java.util.*
+import java.util.Locale
 
 interface Publication {
     var price: Float

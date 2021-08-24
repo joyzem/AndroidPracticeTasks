@@ -1,6 +1,6 @@
 package com.example.practicetask1.kotlinPart2
 
-import java.util.*
+import java.util.Date
 
 /* Создать enum Type с ĸонстантами DEMO и FULL */
 enum class Type {
@@ -28,7 +28,7 @@ data class User(
     Thread.sleep(1000) и повторно вывести в лог startTime.
  */
 fun callStartTimePropTwoTimes() {
-    val user1: User = User(1, "John",1, Type.DEMO)
+    val user1: User = User(1, "John", 1, Type.DEMO)
     println(user1.startTime)
     Thread.sleep(1000)
     println(user1.startTime)
@@ -150,7 +150,7 @@ const val GOODBYE_MESSAGE = "Goodbye!"
 const val AUTH_MESSAGE = "Auth started!"
 
 fun doAction(action: Action) {
-    when(action) {
+    when (action) {
         is Action.Registration -> println(WELCOME_MESSAGE)
         is Action.Login -> {
             println(AUTH_MESSAGE)
