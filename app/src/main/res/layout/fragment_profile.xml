@@ -36,11 +36,10 @@
                     app:popupTheme="@style/ThemeOverlay.MaterialComponents.Light"
                     app:title="@string/profile"
                     app:titleCentered="true"
-                    app:titleTextAppearance="@style/AppBarTextStyle">
-
-                </com.google.android.material.appbar.MaterialToolbar>
+                    app:titleTextAppearance="@style/AppBarTextStyle" />
 
                 <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/profile_photo"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="centerCrop"

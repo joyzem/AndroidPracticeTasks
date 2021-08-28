@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/choose_photo_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:paddingBottom="@dimen/dialog_icons_margin">
+
+        <ImageView
+            android:id="@+id/choose_photo_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/start_margin"
+            android:layout_marginTop="@dimen/dialog_icons_margin"
+            android:src="@drawable/ic_upload"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/choose_photo"
+            style="@style/DialogTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="@dimen/start_margin"
+            android:text="@string/choose_photo" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/take_photo_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/dialog_icons_margin">
+
+        <ImageView
+            android:id="@+id/camera_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/start_margin"
+            android:layout_marginTop="@dimen/dialog_icons_margin"
+            android:src="@drawable/ic_camera"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/make_photo"
+            style="@style/DialogTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="@dimen/start_margin"
+            android:text="@string/take_photo" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/delete_photo_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:orientation="horizontal"
+        android:paddingBottom="28dp">
+
+        <ImageView
+            android:id="@+id/delete_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/start_margin"
+            android:layout_marginTop="@dimen/dialog_icons_margin"
+            android:src="@drawable/ic_delete"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/delete_photo"
+            style="@style/DialogTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="@dimen/start_margin"
+            android:text="@string/delete_photo" />
+
+    </LinearLayout>
+
+</LinearLayout>

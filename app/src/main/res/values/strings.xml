@@ -11,4 +11,9 @@
     <string name="search">Поиск</string>
     <string name="history">История</string>
     <string name="help">Помочь</string>
+    <string name="choose_photo">Выбрать фото</string>
+    <string name="take_photo">Сделать снимок</string>
+    <string name="delete_photo">Удалить</string>
+    <string name="explaining_message">Explaining message</string>
+    <string name="no_camera">No camera on the device</string>
 </resources>
