@@ -9,4 +9,9 @@
     <dimen name="icon_top_margin">44dp</dimen>
     <dimen name="dialog_text_top_margin">43dp</dimen>
     <dimen name="dialog_icons_margin">22dp</dimen>
+    <dimen name="category_items_margin">4dp</dimen>
+    <dimen name="horizontal_category_image_margin">24dp</dimen>
+    <dimen name="vertical_category_image_margin">12dp</dimen>
+    <dimen name="category_image_height">120dp</dimen>
+    <dimen name="category_image_width">80dp</dimen>
 </resources>

@@ -1,17 +1,12 @@
 package com.example.practicetask1
 
-import android.content.ActivityNotFoundException
-import android.content.Intent
 import android.os.Bundle
-import android.provider.MediaStore
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import com.example.practicetask1.fragments.HelpFragment
-import com.example.practicetask1.fragments.PhotoDialogFragment
-import com.example.practicetask1.fragments.ProfileFragment
+import com.example.practicetask1.view.fragments.HelpFragment
+import com.example.practicetask1.view.fragments.ProfileFragment
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.navigation.NavigationBarView
-import java.lang.IllegalArgumentException
 
 class MainActivity : AppCompatActivity() {
 

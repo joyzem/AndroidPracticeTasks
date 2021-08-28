@@ -1,4 +1,4 @@
-package com.example.practicetask1.fragments
+package com.example.practicetask1.view.fragments
 
 import android.graphics.Bitmap
 import android.os.Bundle
@@ -53,7 +53,7 @@ class ProfileFragment : Fragment(), PhotoDialogOwner {
                 )
             )
             scaleType = ImageView.ScaleType.CENTER_INSIDE
-            setBackgroundResource(R.color.light_grey)
+            setBackgroundResource(R.color.light_grey2)
         }
     }
 }

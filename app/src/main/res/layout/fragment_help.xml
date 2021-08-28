@@ -1,13 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.HelpFragment">
+    android:orientation="vertical"
+    tools:context=".view.fragments.HelpFragment">
 
-    <TextView
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="SSS" />
+        android:layout_height="wrap_content"
+        android:nestedScrollingEnabled="false"
+        android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar">
 
-</FrameLayout>
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/help_app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="@string/help"
+            app:titleCentered="true"
+            app:titleTextAppearance="@style/AppBarTextStyle" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/choose_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="@dimen/new_section"
+                android:paddingBottom="@dimen/start_section_margin"
+                android:text="@string/choose_help_category"
+                android:textAppearance="@style/TextStyle5" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/category_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="@dimen/category_items_margin"
+                android:nestedScrollingEnabled="false"
+                android:overScrollMode="never"
+                android:paddingTop="@dimen/category_items_margin"
+                tools:listitem="@layout/category_item" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

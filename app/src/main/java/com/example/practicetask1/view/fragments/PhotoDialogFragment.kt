@@ -1,4 +1,4 @@
-package com.example.practicetask1.fragments
+package com.example.practicetask1.view.fragments
 
 import android.Manifest
 import android.app.Activity.RESULT_OK

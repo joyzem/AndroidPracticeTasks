@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/app_bar"
+        android:id="@+id/profile_app_bar"
         android:layout_width="match_parent"
         android:layout_height="@dimen/app_bar_layout_size"
         android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar">
