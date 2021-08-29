@@ -22,4 +22,8 @@
     <string name="olds">Пожилые</string>
     <string name="animals">Животные</string>
     <string name="events">Мероприятия</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="by_organizations">По НКО</string>
+    <string name="by_events">По мероприятиям</string>
 </resources>

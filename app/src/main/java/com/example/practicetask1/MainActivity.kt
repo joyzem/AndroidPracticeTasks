@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.practicetask1.view.fragments.HelpFragment
 import com.example.practicetask1.view.fragments.ProfileFragment
+import com.example.practicetask1.view.fragments.SearchFragment
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.navigation.NavigationBarView
 
@@ -20,8 +21,9 @@ class MainActivity : AppCompatActivity() {
             menu.getItem(2).isEnabled = false
             menu.getItem(2).isChecked = true
             setOnItemSelectedListener {
-                when(it.itemId) {
-                    R.id.profile-> navToFragment(ProfileFragment())
+                when (it.itemId) {
+                    R.id.profile -> navToFragment(ProfileFragment())
+                    R.id.search -> navToFragment(SearchFragment())
                 }
                 true
             }
