@@ -17,7 +17,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:minHeight="?attr/actionBarSize"
-            app:contentScrim="?attr/colorPrimary"
             app:layout_scrollFlags="scroll|enterAlwaysCollapsed|enterAlways"
             app:scrimVisibleHeightTrigger="@dimen/app_bar_layout_size"
             app:title="@string/profile">
@@ -42,8 +41,9 @@
                     android:id="@+id/profile_photo"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:background="@color/light_grey2"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/image_man" />
+                    tools:src="@drawable/image_man" />
 
             </LinearLayout>
 
