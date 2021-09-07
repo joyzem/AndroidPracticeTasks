@@ -19,14 +19,24 @@
             android:orientation="vertical">
 
             <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/search_toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="?attr/actionBarSize"
                 app:menu="@menu/search_menu"
                 app:title="@string/search"
                 app:titleCentered="true"
-                app:titleTextAppearance="@style/ToolbarTextStyle">
+                app:titleTextAppearance="@style/ToolbarTextStyle" />
 
-            </com.google.android.material.appbar.MaterialToolbar>
+            <FrameLayout
+                android:id="@+id/search_active"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_marginHorizontal="8dp"
+                android:visibility="gone"
+                android:theme="@style/ThemeOverlay.MaterialComponents.Light">
+                <include layout="@layout/search_line_layout" />
+
+            </FrameLayout>
 
             <com.google.android.material.tabs.TabLayout
                 android:id="@+id/tab_layout"

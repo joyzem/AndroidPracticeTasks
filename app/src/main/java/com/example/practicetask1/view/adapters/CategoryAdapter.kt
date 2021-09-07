@@ -1,4 +1,4 @@
-package com.example.practicetask1.view.adapter
+package com.example.practicetask1.view.adapters
 
 import android.view.LayoutInflater
 import android.view.View

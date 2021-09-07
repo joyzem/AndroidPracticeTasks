@@ -1,4 +1,4 @@
-package com.example.practicetask1.view.adapter
+package com.example.practicetask1.view.adapters
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
@@ -9,6 +9,8 @@ import com.example.practicetask1.view.fragments.OrganizationsTabFragment
 
 class SearchFragmentsAdapter(fragmentManager: FragmentManager, lifecycle: Lifecycle) :
     FragmentStateAdapter(fragmentManager, lifecycle) {
+
+
 
     override fun getItemCount() = 2
 

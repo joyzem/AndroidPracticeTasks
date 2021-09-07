@@ -14,4 +14,10 @@
     <dimen name="vertical_category_image_margin">12dp</dimen>
     <dimen name="category_image_height">120dp</dimen>
     <dimen name="category_image_width">80dp</dimen>
+    <dimen name="search_results_start_padding">20dp</dimen>
+    <dimen name="search_results_text_view_padding">20dp</dimen>
+    <dimen name="search_results_bottom_margin">20dp</dimen>
+    <dimen name="key_words_text_view_top_margin">20dp</dimen>
+    <dimen name="empty_search_text_padding">58dp</dimen>
+    <dimen name="search_results_end_padding">8dp</dimen>
 </resources>

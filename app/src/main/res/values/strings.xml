@@ -26,4 +26,10 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="by_organizations">По НКО</string>
     <string name="by_events">По мероприятиям</string>
+    <string name="enter_organization_name">Введите название организации</string>
+    <string name="enter_event_name">Введите название мероприятия</string>
+    <string name="key_words">Ключевые слова:</string>
+    <string name="search_results">Результаты поиска:</string>
+    <string name="offer_organizations_input">Напишите в строке поиска название организации или ключевые слова.</string>
+    <string name="example">Например,</string>
 </resources>

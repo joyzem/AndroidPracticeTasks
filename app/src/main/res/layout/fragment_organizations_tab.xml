@@ -1,14 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.fragments.OrganizationsTabFragment">
+    android:background="@color/light_grey2">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:background="@color/light_grey2"
+        android:orientation="vertical"
+        android:paddingBottom="?attr/actionBarSize"
+        tools:context=".view.fragments.OrganizationsTabFragment">
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/organizations_key_words"
+            style="@style/textStyle13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/key_words_text_view_top_margin"
+            android:paddingHorizontal="@dimen/search_results_text_view_padding"
+            tools:text="@string/key_words" />
+
+        <TextView
+            android:id="@+id/search_organizations_results"
+            style="@style/textStyle13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/search_results_bottom_margin"
+            android:paddingHorizontal="@dimen/search_results_text_view_padding"
+            tools:text="@string/search_results" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/cool_grey" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/search_organizations_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:nestedScrollingEnabled="false"
+            android:orientation="vertical"
+            android:overScrollMode="never"
+            tools:listitem="@layout/search_item_layout" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/cool_grey" />
+
+    </LinearLayout>
+
+</ScrollView>

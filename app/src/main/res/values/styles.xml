@@ -54,4 +54,18 @@
         <item name="textAllCaps">false</item>
         <item name="android:textAllCaps">false</item>
     </style>
+
+    <style name="textStyle13">
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black_54</item>
+    </style>
+
+    <style name="TextStyle3">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@color/black_70</item>
+    </style>
+
 </resources>

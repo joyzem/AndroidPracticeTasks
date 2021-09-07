@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="organizations_array">
+        <item>\"Во имя жизни\"</item>
+        <item>\"Детские домики\"</item>
+        <item>Благотворительный Фонд В. Потанина</item>
+        <item>\"Мозаика счастья\"</item>
+        <item>\"Выручай\"</item>
+        <item>Благотворительный фонд \"Здоровье\"</item>
+    </string-array>
+
+</resources>

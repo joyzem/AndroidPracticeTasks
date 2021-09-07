@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.practicetask1.R
 import com.example.practicetask1.model.HelpCategory
-import com.example.practicetask1.view.adapter.CategoryAdapter
+import com.example.practicetask1.view.adapters.CategoryAdapter
 
 class HelpFragment : Fragment() {
 

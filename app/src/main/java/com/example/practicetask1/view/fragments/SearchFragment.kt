@@ -4,14 +4,25 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
+import android.widget.FrameLayout
+import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
 import com.example.practicetask1.R
-import com.example.practicetask1.view.adapter.SearchFragmentsAdapter
+import com.example.practicetask1.view.adapters.SearchFragmentsAdapter
+import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.tabs.TabLayout
 
 
 class SearchFragment : Fragment() {
+
+    private var searchToolbarInactive: MaterialToolbar? = null
+    private var searchLineActive: FrameLayout? = null
+    private var queryEditText: EditText? = null
+    private lateinit var tabLayout: TabLayout
+    private lateinit var pager2: ViewPager2
+    private lateinit var adapter: SearchFragmentsAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -23,10 +34,25 @@ class SearchFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val tabLayout: TabLayout = view.findViewById(R.id.tab_layout)
-        val pager2: ViewPager2 = view.findViewById(R.id.pager)
+        searchToolbarInactive = view.findViewById(R.id.search_toolbar)
+        searchLineActive = view.findViewById(R.id.search_active)
+        queryEditText = view.findViewById(R.id.edit_search_text)
 
-        val adapter = SearchFragmentsAdapter(parentFragmentManager, lifecycle)
+        queryEditText?.addTextChangedListener {
+
+        }
+        setTabLayout(view)
+        view.findViewById<MaterialToolbar>(R.id.search_toolbar).menu.getItem(0)
+            .setOnMenuItemClickListener {
+                swapToolbarToSearch()
+                true
+            }
+    }
+
+    private fun setTabLayout(view: View) {
+        tabLayout = view.findViewById(R.id.tab_layout)
+        pager2 = view.findViewById(R.id.pager)
+        adapter = SearchFragmentsAdapter(parentFragmentManager, lifecycle)
         pager2.adapter = adapter
 
         tabLayout.addTab(tabLayout.newTab().setText(R.string.by_events))
@@ -40,18 +66,36 @@ class SearchFragment : Fragment() {
             }
 
             override fun onTabUnselected(tab: TabLayout.Tab?) {
-                // Empty
+                // Nothing
             }
 
             override fun onTabReselected(tab: TabLayout.Tab?) {
-                // Empty
+                // Nothing
             }
         })
 
         pager2.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
                 tabLayout.selectTab(tabLayout.getTabAt(position))
+                queryEditText?.setHint(
+                    if (position == 0)
+                        R.string.enter_event_name else R.string.enter_organization_name
+                )
             }
         })
+    }
+
+    private fun swapToolbarToSearch() {
+        with(requireView()) {
+            searchToolbarInactive?.visibility = View.GONE
+            searchLineActive?.visibility = View.VISIBLE
+        }
+    }
+
+    private fun swapToolbarToDefault() {
+        with(requireView()) {
+            searchToolbarInactive?.visibility = View.VISIBLE
+            searchLineActive?.visibility = View.GONE
+        }
     }
 }
