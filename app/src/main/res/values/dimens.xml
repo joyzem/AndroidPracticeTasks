@@ -6,8 +6,6 @@
     <dimen name="app_bar_layout_size">300dp</dimen>
     <dimen name="bottom_nav_menu_margin">92dp</dimen>
     <dimen name="start_margin">24dp</dimen>
-    <dimen name="icon_top_margin">44dp</dimen>
-    <dimen name="dialog_text_top_margin">43dp</dimen>
     <dimen name="dialog_icons_margin">22dp</dimen>
     <dimen name="category_items_margin">4dp</dimen>
     <dimen name="horizontal_category_image_margin">24dp</dimen>

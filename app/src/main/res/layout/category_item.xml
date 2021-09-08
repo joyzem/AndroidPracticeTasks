@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_margin="@dimen/category_items_margin"
     android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:clickable="true"
     android:layout_height="wrap_content"
-    android:background="@color/light_grey">
+    android:layout_margin="@dimen/category_items_margin"
+    android:background="@color/light_grey"
+    android:clickable="true"
+    android:orientation="vertical">
 
     <ImageView
         android:id="@+id/category_picture"
         android:layout_width="@dimen/category_image_height"
         android:layout_height="@dimen/category_image_width"
-        android:layout_marginVertical="@dimen/vertical_category_image_margin"
-        android:layout_marginHorizontal="@dimen/horizontal_category_image_margin"
         android:layout_gravity="center"
-        tools:src="@drawable/adult"
-        tools:ignore="ContentDescription" />
+        android:layout_marginHorizontal="@dimen/horizontal_category_image_margin"
+        android:layout_marginVertical="@dimen/vertical_category_image_margin"
+        tools:ignore="ContentDescription"
+        tools:src="@drawable/adult" />
 
 
     <TextView

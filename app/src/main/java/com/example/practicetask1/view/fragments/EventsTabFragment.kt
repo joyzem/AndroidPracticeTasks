@@ -18,12 +18,12 @@ class EventsTabFragment : Fragment() {
 
     private var recyclerView: RecyclerView? = null
     private var queryResultsAdapter: QueryResultsAdapter? = null
-    private var dataset: List<QueryResult> = listOf()
     private var keyWordsTextView: TextView? = null
     private var searchResultsTextView: TextView? = null
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         return inflater.inflate(R.layout.fragment_events_tab, container, false)
@@ -33,31 +33,37 @@ class EventsTabFragment : Fragment() {
         keyWordsTextView = view.findViewById(R.id.events_key_words)
         searchResultsTextView = view.findViewById(R.id.search_events_results)
         recyclerView = view.findViewById(R.id.search_events_recycler_view)
-        queryResultsAdapter = QueryResultsAdapter(listOf())
+        queryResultsAdapter = QueryResultsAdapter(getDataByQuery(""))
         recyclerView?.adapter = queryResultsAdapter
         ResourcesCompat.getDrawable(resources, R.drawable.divider, resources.newTheme())
             ?.let { drawable ->
-                recyclerView?.addItemDecoration(ItemDivider(drawable, ItemDivider.VERTICAL, requireContext()))
+                recyclerView?.addItemDecoration(
+                    ItemDivider(
+                        drawable,
+                        ItemDivider.VERTICAL,
+                        requireContext()
+                    )
+                )
             }
         recyclerView?.layoutManager = LinearLayoutManager(requireContext())
         updateQueryResults("")
     }
 
     fun updateQueryResults(query: String) {
-        dataset = getDataByQuery(query)
-        keyWordsTextView?.text =
-            "${resources.getString(R.string.key_words)} ${getKeyWordsAmount(query)}"
-        searchResultsTextView?.text =
-            "${resources.getString(R.string.search_results)} ${getSearchResults(query)}"
-        updateRecyclerView(dataset)
+        keyWordsTextView?.text = resources.getString(R.string.key_words, getKeyWords(query))
+        searchResultsTextView?.text = resources.getString(
+            R.string.search_results,
+            getSearchResultsAmount(query),
+            resources.getQuantityString(R.plurals.events, getSearchResultsAmount(query))
+        )
     }
 
-    private fun getSearchResults(query: String): Int {
-        return 0
+    private fun getSearchResultsAmount(query: String): Int {
+        return recyclerView?.adapter?.itemCount ?: 0
     }
 
-    private fun getKeyWordsAmount(query: String): Int {
-        return 0
+    private fun getKeyWords(query: String): String {
+        return ""
     }
 
     private fun updateRecyclerView(newDataset: List<QueryResult>) {
@@ -70,5 +76,4 @@ class EventsTabFragment : Fragment() {
             QueryResult(title)
         }.shuffled()
     }
-
 }

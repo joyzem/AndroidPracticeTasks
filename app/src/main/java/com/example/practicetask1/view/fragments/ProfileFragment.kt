@@ -53,7 +53,6 @@ class ProfileFragment : Fragment(), PhotoDialogOwner {
             e.printStackTrace()
             false
         }
-
     }
 
     private fun isProfilePhotoDeleted(): Boolean {

@@ -28,7 +28,6 @@ class ItemDivider(
         } else if (orientation == VERTICAL) {
             drawVertical(canvas, parent)
         }
-
     }
 
     private fun drawVertical(canvas: Canvas, parent: RecyclerView) {
@@ -52,7 +51,7 @@ class ItemDivider(
             val child = parent.getChildAt(i)
             parent.getDecoratedBoundsWithMargins(child, rect)
             val bottom: Int = rect.bottom + Math.round(child.translationY)
-            val top: Int = bottom - divider.getIntrinsicHeight()
+            val top: Int = bottom - divider.intrinsicHeight
             divider.setBounds(left, top, right, bottom)
             divider.draw(canvas)
         }
@@ -63,7 +62,6 @@ class ItemDivider(
         canvas.save()
         val top: Int
         val bottom: Int
-        //noinspection AndroidLintNewApi - NewApi lint fails to handle overrides.
         if (parent.clipToPadding) {
             top = parent.paddingTop
             bottom = parent.height - parent.paddingBottom
@@ -81,7 +79,7 @@ class ItemDivider(
             val child = parent.getChildAt(i)
             parent.getDecoratedBoundsWithMargins(child, rect)
             val right: Int = rect.right + Math.round(child.translationX)
-            val left: Int = right - divider.getIntrinsicWidth()
+            val left: Int = right - divider.intrinsicWidth
             divider.setBounds(left, top, right, bottom)
             divider.draw(canvas)
         }

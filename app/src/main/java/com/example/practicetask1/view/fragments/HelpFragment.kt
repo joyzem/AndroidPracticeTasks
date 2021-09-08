@@ -15,7 +15,8 @@ import com.example.practicetask1.view.adapters.CategoryAdapter
 class HelpFragment : Fragment() {
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         return inflater.inflate(R.layout.fragment_help, container, false)
@@ -26,14 +27,12 @@ class HelpFragment : Fragment() {
         val categoryDataset: Array<HelpCategory> = getCategories()
         val adapter = CategoryAdapter(categoryDataset)
         val layoutManager = GridLayoutManager(requireContext(), 2).apply {
-
         }
         val recyclerView = view.findViewById<RecyclerView>(R.id.category_recycler_view).apply {
             setAdapter(adapter)
             setLayoutManager(layoutManager)
         }
     }
-
 
     private fun getCategories(): Array<HelpCategory> {
         return arrayOf(

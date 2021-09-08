@@ -22,14 +22,24 @@
     <string name="olds">Пожилые</string>
     <string name="animals">Животные</string>
     <string name="events">Мероприятия</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="by_organizations">По НКО</string>
     <string name="by_events">По мероприятиям</string>
     <string name="enter_organization_name">Введите название организации</string>
     <string name="enter_event_name">Введите название мероприятия</string>
-    <string name="key_words">Ключевые слова:</string>
-    <string name="search_results">Результаты поиска:</string>
+    <string name="key_words">Ключевые слова: %s</string>
+    <string name="search_results">Результаты поиска: %d %s</string>
+    <plurals name="events">
+        <item quantity="one">мероприятие</item>
+        <item quantity="few">мероприятия</item>
+        <item quantity="zero">мероприятий</item>
+        <item quantity="other">мероприятий</item>
+    </plurals>
+    <plurals name="organizations">
+        <item quantity="zero">организаций</item>
+        <item quantity="one">организация</item>
+        <item quantity="other">организаций</item>
+    </plurals>
     <string name="offer_organizations_input">Напишите в строке поиска название организации или ключевые слова.</string>
     <string name="example">Например,</string>
+    <string name="voice_search">Голосовой поиск</string>
 </resources>

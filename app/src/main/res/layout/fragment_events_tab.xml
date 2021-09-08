@@ -2,16 +2,15 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/light_grey2">
+    android:layout_height="match_parent">
 
     <LinearLayout
+        android:id="@+id/search_events_results_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="?attr/actionBarSize"
         android:background="@color/light_grey2"
         android:orientation="vertical"
-        android:id="@+id/search_events_results_layout"
+        android:paddingBottom="?attr/actionBarSize"
         tools:context=".view.fragments.OrganizationsTabFragment">
 
         <TextView
@@ -19,8 +18,8 @@
             style="@style/textStyle13"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingHorizontal="@dimen/search_results_text_view_padding"
             android:layout_marginTop="@dimen/key_words_text_view_top_margin"
+            android:paddingHorizontal="@dimen/search_results_text_view_padding"
             tools:text="@string/key_words" />
 
         <TextView
@@ -28,8 +27,8 @@
             style="@style/textStyle13"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingHorizontal="@dimen/search_results_text_view_padding"
             android:layout_marginBottom="@dimen/search_results_bottom_margin"
+            android:paddingHorizontal="@dimen/search_results_text_view_padding"
             tools:text="@string/search_results" />
 
         <View

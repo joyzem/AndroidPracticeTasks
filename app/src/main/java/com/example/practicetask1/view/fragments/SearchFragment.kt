@@ -14,7 +14,6 @@ import com.example.practicetask1.view.adapters.SearchFragmentsAdapter
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.tabs.TabLayout
 
-
 class SearchFragment : Fragment() {
 
     private var searchToolbarInactive: MaterialToolbar? = null
@@ -25,7 +24,8 @@ class SearchFragment : Fragment() {
     private lateinit var adapter: SearchFragmentsAdapter
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
@@ -39,7 +39,6 @@ class SearchFragment : Fragment() {
         queryEditText = view.findViewById(R.id.edit_search_text)
 
         queryEditText?.addTextChangedListener {
-
         }
         setTabLayout(view)
         view.findViewById<MaterialToolbar>(R.id.search_toolbar).menu.getItem(0)
@@ -62,6 +61,7 @@ class SearchFragment : Fragment() {
             override fun onTabSelected(tab: TabLayout.Tab?) {
                 tab?.let {
                     pager2.currentItem = tab.position
+                    swapToolbarToDefault()
                 }
             }
 

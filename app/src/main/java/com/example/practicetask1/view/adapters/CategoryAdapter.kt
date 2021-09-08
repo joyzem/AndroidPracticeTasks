@@ -35,5 +35,4 @@ class CategoryAdapter(private val dataset: Array<HelpCategory>) :
     }
 
     override fun getItemCount() = dataset.size
-
 }

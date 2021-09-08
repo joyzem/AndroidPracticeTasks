@@ -32,8 +32,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 android:layout_marginHorizontal="8dp"
-                android:visibility="gone"
-                android:theme="@style/ThemeOverlay.MaterialComponents.Light">
+                android:theme="@style/ThemeOverlay.MaterialComponents.Light"
+                android:visibility="gone">
+
                 <include layout="@layout/search_line_layout" />
 
             </FrameLayout>
